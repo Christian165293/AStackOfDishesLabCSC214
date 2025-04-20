@@ -6,4 +6,8 @@ public class Dish {
   Dish(String description) {
     this.description = description;
   }
+
+  public String getDescription(){
+    return description;
+  }
 }
