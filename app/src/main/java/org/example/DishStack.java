@@ -14,6 +14,9 @@ public class DishStack {
     private int size;
 
     public Dish peek() {
+        if (top == null) {
+            throw new IllegalStateException("Queue is empty");
+        }
         return top.data;
     }
 
@@ -29,6 +32,9 @@ public class DishStack {
     }
 
     public Dish pop() {
+        if (top == null) {
+            throw new IllegalStateException("Queue is empty");
+        }
         Dish data = top.data;
         top = top.next;
         size--;
